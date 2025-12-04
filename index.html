@@ -69,17 +69,7 @@
         <div id="Abstract" class="section">
             <div id="Abstract_InText">
                 <h2>Abstract</h2>
-                <p>
-                    Game engines can produce realistic virtual experiences by simulating real life physics. This article
-                    aims to explore the modelling of forces, motion and the interactions of objects using physics
-                    engines.
-                    Core concepts such as collisions detection and numerical integration, which allow engines to
-                    determine
-                    how objects touch and move, will be investigated. These simulation techniques focus on stability and
-                    performance over accuracy whilst still providing a realistic result to the players. The limitations
-                    of
-                    game physics and how advancements in hardware will improve them will also be explored.
-                </p>
+                <p>Game engines can produce realistic virtual experiences by simulating real life physics. This article aims to explore the modelling of forces, motion and the interactions of objects using physics engines. Core concepts such as collisions detection and numerical integration, which allow engines to determine how objects touch and move, will be investigated. These simulation techniques focus on stability and performance over accuracy whilst still providing a realistic result to the players. The limitations of game physics and how advancements in hardware will improve them will also be explored.</p>
             </div>
         </div>
 
@@ -88,59 +78,23 @@
             <div id="Introduction" class="section">
                 <div id="Introduction_InText">
                     <h2>Introduction</h2>
-                    <p>
-                        Modern video games frequently use real world physics in their core mechanics. For example when a
-                        character moves up a slope or jumps from a platform to another, the game engine will calculate
-                        the
-                        motion to present a natural feeling result to the player. Although game engines do not replicate
-                        real
-                        world physics completely accurately, as this is highly demanding, they present a motion which
-                        feels
-                        correct to the player (<a href="#ref1">Barraff, 1977</a>).
-                    </p>
-                    <p>
-                        Popular game engines such as Unity and Source Engine create and use their own physics libraries.
-                        For
-                        example the Source Physics System (<a href="#ref5">Valve, 2023</a>). The benefit of using these
-                        libraries is that the
-                        developers can create believable scenarios whilst also being able to control the computational
-                        costs
-                        (<a href="#ref4">Nvidia, 2023</a>).
-                    </p>
+                    <p>Modern video games frequently use real world physics in their core mechanics. For example when a character moves up a slope or jumps from a platform to another, the game engine will calculate the motion to present a natural feeling result to the player. Although game engines do not replicate real world physics completely accurately, as this is highly demanding, they present a motion which feels correct to the player (Barraff, 1977).</p>
+                    <p>Popular game engines such as Unity and Source Engine create and use their own physics libraries. For example the Source Physics System (Valve, 2023). The benefit of using these libraries is that the developers can create believable scenarios whilst also being able to control the computational costs (Nvidia, 2023).</p>
                 </div>
             </div>
 
             <div id="Simulation" class="section">
                 <div id="Simulation_InText">
                     <h2>How games engines simulate physics</h2>
-                    <p>
-                        Game engines utilise cyclic loops known as simulation loops (<a href="#ref1">Baraff, 1977</a>).
-                        These loops calculate
-                        interactions of objects and run continuously allowing a game to execute events endlessly.
-                    </p>
+                    <p>Game engines utilise cyclic loops known as simulation loops (Baraff, 1977). These loops calculate interactions of objects and run continuously allowing a game to execute events endlessly.</p>
                 </div>
             </div>
 
             <div id="Collision" class="section">
                 <div id="Collision_InText">
                     <h2>Collision Detection</h2>
-                    <p>
-                        Within the simulation loop, one of the most important tasks is collision detection, which is
-                        done
-                        using a two stage approach. The Broad phase identifies and ignores objects that are too far
-                        apart
-                        using simple shapes or hitboxes (<a href="#ref1">Baraff, 1977</a>). Following on, the narrow
-                        phase
-                        priorities accuracy
-                        and uses algorithms such as Separating Axis Theorem or Gilebrt-Johnson-Keerthi methods to detect
-                        any
-                        collisions and the level of penetration (<a href="#ref1">Baraff, 1977</a>).
-                    </p>
-                    <p>
-                        Once a collision has been identified, the engine will create appropriate and realistic movements
-                        to
-                        portray the action, in a way that is stable and relates to the game.
-                    </p>
+                    <p>Within the simulation loop, one of the most important tasks is collision detection, which is done using a two stage approach. The Broad phase identifies and ignores objects that are too far apart using simple shapes or hitboxes (Baraff, 1977). Following on, the narrow phase priorities accuracy and uses algorithms such as Separating Axis Theorem or Gilebrt-Johnson-Keerthi methods to detect any collisions and the level of penetration (Baraff, 1977).</p>
+                    <p>Once a collision has been identified, the engine will create appropriate and realistic movements to portray the action, in a way that is stable and relates to the game.</p>
                 </div>
             </div>
 
@@ -149,101 +103,35 @@
                     <h2>Key techniques used in physics engines</h2>
 
                     <h3>Numerical Integration and Motion</h3>
-                    <p>
-                        Mathematicians use calculus to calculate motion however games tend to use numerical integration
-                        to
-                        find an approximation of these calculations as they do not require exact solutions. One method
-                        used
-                        is Eulers integration which examines the slopes at a point to estimate the next, meaning it can
-                        become unreliable when objects are moving at high speeds or with great force. Semi Implicit
-                        Euler,
-                        is used to counter this as it updates the velocity before the position. Another method used by
-                        game
-                        engines is Verlet integration as it outputs more smooth and stable motions then Euler
-                        integration
-                        and it is commonly used for cloth or particle systems within games (<a href="#ref2">Bourg and
-                            Seemann, 2001</a>). These
-                        methods allow for the realistic movements we see in video games whilst maintaining stability.
-                    </p>
+                    <p>Mathematicians use calculus to calculate motion however games tend to use numerical integration to find an approximation of these calculations as they do not require exact solutions. One method used is Eulers integration which examines the slopes at a point to estimate the next, meaning it can become unreliable when objects are moving at high speeds or with great force. Semi Implicit Euler, is used to counter this as it updates the velocity before the position. Another method used by game engines is Verlet integration as it outputs more smooth and stable motions then Euler integration and it is commonly used for cloth or particle systems within games (Bourg and Seemann, 2001). These methods allow for the realistic movements we see in video games whilst maintaining stability.</p>
 
                     <h3>Rigid Body Modelling</h3>
-                    <p>
-                        Objects which do not need to bend or change shape are labelled as rigid bodies, allowing for
-                        calculations to be much easier. However, when completing calculations relating objects such as
-                        fluids
-                        or cloths the engine will need to use techniques such as Position based dynamics (<a
-                            href="#ref3">Macklin et al, 2014</a>). This method updates the position of the vertices of
-                        the
-                        object rather then directly applying
-                        a
-                        force to it which makes it efficient and suitable for video games as it is fast and stable.
-                    </p>
+                    <p>Objects which do not need to bend or change shape are labelled as rigid bodies, allowing for calculations to be much easier. However, when completing calculations relating objects such as fluids or cloths the engine will need to use techniques such as Position based dynamics (Macklin et al, 2014). This method updates the position of the vertices of the object rather then directly applying a force to it which makes it efficient and suitable for video games as it is fast and stable.</p>
                 </div>
             </div>
 
             <div id="Limitations" class="section">
                 <div id="Limitations_InText">
                     <h2>Limitations and Future Developments</h2>
-                    <p>
-                        Realism and performance will always have to be balanced when it comes to the physics of a game,
-                        leading to many limitations:
-                    </p>
-                    <p>
-                        <strong>Floating Point errors:</strong> Extremely precise numbers cannot be stored on computers,
-                        leading to rounding errors which can cause irregular movements in the objects such as drifting
-                        or
-                        jitters.
-                    </p>
-                    <p>
-                        <strong>Performance Issues:</strong> Since games need to ensure they have good performance for
-                        players to run them at stable FPS and without crashes, algorithms must be simplified to allow
-                        for
-                        clean simulation of multiple objects (<a href="#ref4">Nvidia, 2023</a>).
-                    </p>
-                    <p>
-                        <strong>Multiplayer Games:</strong> Players may see different things to others as the game will
-                        be
-                        processed differently according to their devices power, leading to competitive disadvantage in
-                        online
-                        games. To add to this, games commonly use predictions to counter this which then leads to even
-                        more
-                        issues as the players ping can affect the accuracy of these predictions.
-                    </p>
-                    <p>
-                        <strong>Tunnelling:</strong> Games that do not have continuous collision detection due to its
-                        expense may experience objects phasing through walls when they move at insanely high speeds.
-                    </p>
-                    <p>
-                        However, as technology advances so will the capability of game engines. With the increase in GPU
-                        technology an increasing number of objects can be simulated with more realistic behaviours then
-                        before. Adding to this, machine learning techniques can accurately predict movements without the
-                        developers having to define parameters.
-                    </p>
+                    <p>Realism and performance will always have to be balanced when it comes to the physics of a game, leading to many limitations:</p>
+                    <p><strong>Floating Point errors:</strong> Extremely precise numbers cannot be stored on computers, leading to rounding errors which can cause irregular movements in the objects such as drifting or jitters.</p>
+                    <p><strong>Performance Issues:</strong> Since games need to ensure they have good performance for players to run them at stable FPS and without crashes, algorithms must be simplified to allow for clean simulation of multiple objects (Nvidia, 2023).</p>
+                    <p><strong>Multiplayer Games:</strong> Players may see different things to others as the game will be processed differently according to their devices power, leading to competitive disadvantage in online games. To add to this, games commonly use predictions to counter this which then leads to even more issues as the players ping can affect the accuracy of these predictions.</p>
+                    <p><strong>Improper Collision Detection:</strong> Games tend to use htiboxes to define the regions where players can be damaged. Due to the fact that hitboxes are made of simple shapes such as boxes, spheres and cylinders this can lead to body parts clipping through walls or players may notice that their bullets are hitting the enemy models but not registering any damage. This can lead to a competitive disadvantage for players and ruin their immersion within the game.</p>
+                    <p><strong>Tunnelling:</strong> Games that do not have continuous collision detection due to its expense may experience objects phasing through walls when they move at insanely high speeds.</p>
+                    <p>However, as technology advances so will the capability of game engines. With the increase in GPU technology an increasing number of objects can be simulated with more realistic behaviours then before. Adding to this, machine learning techniques can accurately predict movements without the developers having to define parameters.</p>
                 </div>
             </div>
 
             <div id="Conclusion" class="section">
                 <div id="Conclusion_InText">
                     <h2>Conclusion</h2>
-                    <p>
-                        Game engines simulate physics by creating a balance between realism and performance by
-                        simplifying
-                        algorithms and models to present a believable simulation to players. Although the current
-                        capability
-                        of these engines is not enough to produce perfect versions of the real worlds physics, the
-                        progression of technology will allow these simulations to move closer and closer to it whilst
-                        still
-                        maintaining appropriate performance for players to enjoy the games.
-                    </p>
+                    <p>Game engines simulate physics by creating a balance between realism and performance by simplifying algorithms and models to present a believable simulation to players. Although the current capability of these engines is not enough to produce perfect versions of the real worlds physics, the progression of technology will allow these simulations to move closer and closer to it whilst still maintaining appropriate performance for players to enjoy the games.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- //////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////// -->
-        <!-- Placeholder for total word count -->
         <p id="totalWordCount"></p>
         <hr>
 
@@ -251,25 +139,19 @@
             <h2>References</h2>
             <ol>
                 <li id="ref1">
-                    <a href="https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf">Barraff, D. (1997) <em>An
-                            Introduction to Physically Based Modeling: Rigid Body Simulation I — Unconstrained Rigid
-                            Body Dynamics</em>. SIGGRAPH Course Notes. ACM.</a>
+                    <a href="https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf">Barraff, D. (1997) <em>An Introduction to Physically Based Modeling: Rigid Body Simulation I — Unconstrained Rigid Body Dynamics</em>. SIGGRAPH Course Notes. ACM.</a>
                 </li>
                 <li id="ref2">
-                    <a href="https://archive.org/details/physicsforgamede0000bour/page/n7/mode/2up?utm_source=chatgpt.com">Bourg, D.M. and
-                        Seemann, B. (2001) <em>Physics for Game Developers</em>. O’Reilly Media.</a>
+                    <a href="https://archive.org/details/physicsforgamede0000bour/page/n7/mode/2up?utm_source=chatgpt.com">Bourg, D.M. and Seemann, B. (2001) <em>Physics for Game Developers</em>. O’Reilly Media.</a>
                 </li>
                 <li id="ref3">
-                    <a href="https://mmacklin.com/EG2015PBD.pdf">Macklin, M., Müller, M., Chentanez, N. & Kim, T.Y.
-                        (2014) ‘Position-Based Dynamics’, ACM Transactions on Graphics, 33(4).</a>
+                    <a href="https://mmacklin.com/EG2015PBD.pdf">Macklin, M., Müller, M., Chentanez, N. & Kim, T.Y. (2014) ‘Position-Based Dynamics’, ACM Transactions on Graphics, 33(4).</a>
                 </li>
                 <li id="ref4">
-                    <a href="https://nvidia-omniverse.github.io/PhysX/physx/index.html">Nvidia (2023) <em>PhysX SDK
-                            Documentation</em>.</a>
+                    <a href="https://nvidia-omniverse.github.io/PhysX/physx/index.html">Nvidia (2023) <em>PhysX SDK Documentation</em>.</a>
                 </li>
                 <li id="ref5">
-                    <a href="https://developer.valvesoftware.com/wiki/SDK_Docs">Valve (2023) <em>Source Engine
-                            Documentation</em>.</a>
+                    <a href="https://developer.valvesoftware.com/wiki/SDK_Docs">Valve (2023) <em>Source Engine Documentation</em>.</a>
                 </li>
             </ol>
         </div>
@@ -306,34 +188,23 @@
             alert("Last modified time has been successfully verified from GitHub API.");
         }
 
-        // Function to calculate and display word count for a specified section
         function displayWordCount(sectionId, outputId) {
-            // Get the text content from the specified section
             const text = document.getElementById(sectionId).textContent;
-            // Split text into words based on spaces and filter out any empty strings
             const wordArray = text.trim().split(/\s+/);
-            // Count the words
-            const wordCount = wordArray.length;
-            // Return the word count for summing purposes
-            return wordCount;
+            return wordArray.length;
         }
 
-        // Function to calculate and display total word count from selected sections
         function displayTotalWordCount() {
-            // Calculate word count for each section and accumulate the total
             const IntroductionCount = displayWordCount("Introduction_InText");
             const SimulationCount = displayWordCount("Simulation_InText");
             const CollisionCount = displayWordCount("Collision_InText");
             const AnalysisCount = displayWordCount("Analysis_InText");
             const LimitationsCount = displayWordCount("Limitations_InText");
             const ConclusionCount = displayWordCount("Conclusion_InText");
-            // Calculate the sum of all selected sections
             const totalWordCount = IntroductionCount + SimulationCount + CollisionCount + AnalysisCount + LimitationsCount + ConclusionCount;
-            // Display the total word count
             document.getElementById("totalWordCount").innerText = "Total word count: " + totalWordCount;
         }
 
-        // Run the function for specific sections and display total count when the page loads
         window.onload = function () {
             getLastUpdatedTime();
             displayTotalWordCount();
