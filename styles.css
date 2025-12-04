@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
+}
+
+.banner {
+    background-color: #1a4d7a;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+}
+
+.container {
+    margin: 20px auto;
+    background-color: white;
+    padding: 40px;
+    max-width: 1000px;
+}
+
+.table-of-contents {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.table-of-contents h2 {
+    color: #1a4d7a;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.table-of-contents table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.table-of-contents td,
+.table-of-contents th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.table-of-contents th {
+    background-color: #1a4d7a;
+    color: white;
+    font-weight: bold;
+}
+
+.table-of-contents tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-of-contents a {
+    color: #1a4d7a;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.table-of-contents a:hover {
+    color: #2d6ba0;
+    text-decoration: underline;
+}
+
+.word-count-display {
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.timestamp-display {
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: #1a4d7a;
+}
+
+.section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    color: #1a4d7a;
+}
+
+.section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.section p a {
+    color: #2d6ba0;
+    text-decoration: none;
+}
+
+.section p a:hover {
+    text-decoration: underline;
+    color: #1a4d7a;
+}
+
+.references {
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.references h2 {
+    color: #1a4d7a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.references ol {
+    padding-left: 30px;
+}
+
+.references li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.references a {
+    color: #2d6ba0;
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+    color: #1a4d7a;
+}
