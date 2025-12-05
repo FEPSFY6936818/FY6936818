@@ -110,6 +110,37 @@
 
                     <h3>Numerical Integration and Motion</h3>
                     <p>Mathematicians use calculus to calculate motion however games tend to use numerical integration to find an approximation of these calculations as they do not require exact solutions. One method used is Eulers integration which examines the slopes at a point to estimate the next, meaning it can become unreliable when objects are moving at high speeds or with great force. Semi Implicit Euler, is used to counter this as it updates the velocity before the position. Another method used by game engines is Verlet integration as it outputs more smooth and stable motions then Euler integration and it is commonly used for cloth or particle systems within games (Bourg and Seemann, 2001). These methods allow for the realistic movements we see in video games whilst maintaining stability.</p>
+            <div id="table1" style="margin: 30px auto; max-width: 700px;">
+                <h4 style="text-align: center; margin-bottom: 10px;">
+                    Table 1: Comparison of Numerical Integration Methods
+                </h4>
+
+                <table style="width:100%; border-collapse: collapse; font-size: 15px;">
+                    <tr style="background-color:#e6e6e6; font-weight:bold;">
+                        <th style="border:1px solid #333; padding:8px;">Method</th>
+                        <th style="border:1px solid #333; padding:8px;">Advantages</th>
+                        <th style="border:1px solid #333; padding:8px;">Disadvantages</th>
+                    </tr>
+
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px;">Euler</td>
+                        <td style="border:1px solid #333; padding:8px;">Simple and fast to compute.</td>
+                        <td style="border:1px solid #333; padding:8px;">Unstable at high speeds; inaccurate.</td>
+                    </tr>
+
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px;">Semi-Implicit Euler</td>
+                        <td style="border:1px solid #333; padding:8px;">More stable; widely used in games.</td>
+                        <td style="border:1px solid #333; padding:8px;">Still approximate; can drift over time.</td>
+                    </tr>
+
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px;">Verlet</td>
+                        <td style="border:1px solid #333; padding:8px;">Smooth motion; ideal for cloth & particles.</td>
+                        <td style="border:1px solid #333; padding:8px;">Higher memory use; harder to apply forces.</td>
+                    </tr>
+                </table>
+            </div>
 
                     <h3>Rigid Body Modelling</h3>
                     <p>Objects which do not need to bend or change shape are labelled as rigid bodies, allowing for calculations to be much easier. However, when completing calculations relating objects such as fluids or cloths the engine will need to use techniques such as Position based dynamics (Macklin et al, 2014). This method updates the position of the vertices of the object rather then directly applying a force to it which makes it efficient and suitable for video games as it is fast and stable.</p>
@@ -145,7 +176,7 @@
             <h2>References</h2>
             <ol>
                 <li id="ref1">
-                    <a href="https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf">Baraff, D. (1997) <em>An Introduction to Physically Based Modeling: Rigid Body Simulation I — Unconstrained Rigid Body Dynamics</em>. SIGGRAPH Course Notes. ACM.</a>
+                    <a href="https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf">Barraff, D. (1997) <em>An Introduction to Physically Based Modeling: Rigid Body Simulation I — Unconstrained Rigid Body Dynamics</em>. SIGGRAPH Course Notes. ACM.</a>
                 </li>
                 <li id="ref2">
                     <a href="https://archive.org/details/physicsforgamede0000bour/page/n7/mode/2up?utm_source=chatgpt.com">Bourg, D.M. and Seemann, B. (2001) <em>Physics for Game Developers</em>. O’Reilly Media.</a>
