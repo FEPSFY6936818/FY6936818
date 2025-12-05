@@ -155,3 +155,8 @@ body {
     text-decoration: underline;
     color: #1a4d7a;
 }
+
+video {
+    display: block;
+    margin: 20px auto;
+}
